@@ -59,3 +59,22 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
 
 PS C:\Users\Mañanas\curso MERN\Angular> ng new angular-pro --ssr false --style "css" --create-application false
+
+$ ng g app demo --style "css" --ssr false -p cas -s-t --skip-install
+
+$ npm i
+
+![alt text](image.png)
+
+Creación de 1 componente header
+$ ng g c -b components/header
+
+Angular Dev Tools
+![alt text](image-1.png)
+
+Directivas dinámicas de Angular
+
+@for,@if,@case
+
+Interpolación de contenidos -->{{variable}}
+Interpolación de atributos --> [atributo]="variable"
