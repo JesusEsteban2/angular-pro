@@ -14,8 +14,6 @@ import { MenuComponent } from './components/menu/menu.component';
       <cas-menu></cas-menu>
     </cas-header>
     <main>
-      <p>1</p>
-      <p>2</p>
       <router-outlet />
     </main>
     <cas-footer></cas-footer>

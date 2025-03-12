@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
   //styleUrl: '',
   styles: [],
 })
-export class Patata {
+export class PatataComponent {
   constructor() {
     console.log('Patata');
   }

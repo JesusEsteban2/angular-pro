@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 type MenuItem = {
   path: string;
@@ -7,28 +8,30 @@ type MenuItem = {
 
 @Component({
   selector: 'cas-menu',
-  imports: [],
+  imports: [RouterModule],
   template: `
     <nav>
       <ul>
         @for (item of items; track item.path) {
           <li>
-            <a [href]="item.path">{{ item.label }}</a>
+            <a [routerLink]="item.path" routerLinkActive="active">{{
+              item.label
+            }}</a>
           </li>
         }
         @if (isLogin) {
           <li>
-            <a [href]="'/profile'">Profile</a>
+            <a [routerLink]="'/profile'" routerLinkActive="active">Profile</a>
           </li>
           <li>
-            <a [href]="'/logout'">Logout</a>
+            <a [routerLink]="'/logout'" routerLinkActive="active">Logout</a>
           </li>
         } @else {
           <li>
-            <a [href]="'/login'">Login</a>
+            <a [routerLink]="'/login'" routerLinkActive="active">Login</a>
           </li>
           <li>
-            <a [href]="'/register'">Register</a>
+            <a [routerLink]="'/register'" routerLinkActive="active">Register</a>
           </li>
         }
       </ul>
@@ -55,6 +58,9 @@ type MenuItem = {
       color: white;
       text-decoration: none;
     }
+    .active {
+      color: red;
+    }
   `,
 })
 export class MenuComponent {
@@ -63,16 +69,16 @@ export class MenuComponent {
   constructor() {
     this.items = [
       {
-        path: '/',
+        path: '/home',
         label: 'Home',
+      },
+      {
+        path: '/films',
+        label: 'Films',
       },
       {
         path: '/about',
         label: 'About',
-      },
-      {
-        path: '/contact',
-        label: 'Contact',
       },
     ];
   }
