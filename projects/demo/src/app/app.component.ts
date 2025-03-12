@@ -7,11 +7,10 @@ import { MenuComponent } from './components/menu/menu.component';
 @Component({
   selector: 'cas-root',
   imports: [RouterOutlet, MenuComponent, HeaderComponent, FooterComponent],
-  //templateUrl: './app.component.html',
-  styleUrl: './app.component.css',
+  //styles:,
   template: `
     <cas-header>
-      <cas-menu></cas-menu>
+      <cas-menu />
     </cas-header>
     <main>
       <router-outlet />

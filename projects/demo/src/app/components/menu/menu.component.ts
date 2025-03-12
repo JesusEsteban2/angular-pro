@@ -21,17 +21,17 @@ type MenuItem = {
         }
         @if (isLogin) {
           <li>
-            <a [routerLink]="'/profile'" routerLinkActive="active">Profile</a>
+            <a [routerLink]="'/profile'">Profile</a>
           </li>
           <li>
-            <a [routerLink]="'/logout'" routerLinkActive="active">Logout</a>
+            <a [routerLink]="'/logout'">Logout</a>
           </li>
         } @else {
           <li>
-            <a [routerLink]="'/login'" routerLinkActive="active">Login</a>
+            <a [routerLink]="'/login'">Login</a>
           </li>
           <li>
-            <a [routerLink]="'/register'" routerLinkActive="active">Register</a>
+            <a [routerLink]="'/register'">Register</a>
           </li>
         }
       </ul>
@@ -58,8 +58,12 @@ type MenuItem = {
       color: white;
       text-decoration: none;
     }
+    a:hover {
+      text-decoration: underline;
+    }
     .active {
-      color: red;
+      font-weight: bold;
+      transform: scale(1.2);
     }
   `,
 })
