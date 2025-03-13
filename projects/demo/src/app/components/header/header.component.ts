@@ -8,6 +8,11 @@ import { Component } from '@angular/core';
       display: block;
       text-align: center;
     }
+    img,
+    h1 {
+      display: inline-flex;
+      margin-right: 20px;
+    }
   `,
   template: ` <header>
     <img src="./assets/favicon.svg" alt="Logo" />
@@ -19,6 +24,14 @@ export class HeaderComponent {
   title = 'Angular Demo';
 
   constructor() {
-    console.log('this.title');
+    console.log(this.title);
+  }
+
+  ngOnInit() {
+    console.log('On Init HeaderComponent');
+  }
+
+  ngOnDestroy() {
+    console.log('On Destroy HeaderComponent');
   }
 }

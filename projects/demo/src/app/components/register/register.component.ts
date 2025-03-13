@@ -4,8 +4,6 @@ import { Component } from '@angular/core';
   selector: 'cas-register',
   imports: [],
   templateUrl: './register.component.html',
-  styleUrl: './register.component.css'
+  styleUrl: './register.component.css',
 })
-export class RegisterComponent {
-
-}
+export default class RegisterComponent {}

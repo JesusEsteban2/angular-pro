@@ -4,8 +4,16 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'cas-footer',
   imports: [DatePipe],
-  styleUrl: './footer.component.css',
-  template: `<p>{{ today.toDateString() }}-{{ today.toLocaleTimeString() }}</p>
+  styles: `
+    :host {
+      display: block;
+      align-items: center;
+      text-align: center;
+    }
+  `,
+  template: `<p>
+      {{ today.toLocaleDateString() }}-{{ today.toLocaleTimeString() }}
+    </p>
     <p>
       {{ today | date: 'full' }}
     </p> `,
