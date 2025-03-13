@@ -10,6 +10,7 @@ import { Component } from '@angular/core';
     }
   `,
   template: ` <header>
+    <img src="./assets/favicon.svg" alt="Logo" />
     <h1>Welcome {{ title }}</h1>
     <ng-content></ng-content>
   </header>`,
