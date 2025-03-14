@@ -76,5 +76,31 @@ Directivas dinámicas de Angular
 
 @for,@if,@case
 
-Interpolación de contenidos -->{{variable}}
-Interpolación de atributos --> [atributo]="variable"
+Interpolación de contenidos -->{{expresión Javascript}}
+Interpolación de atributos --> [atributo]="expresión Javascript"
+
+svg como templates.
+
+input y output (@input,@output) comunicación entre Padre e Hijo y viceversa. Modelos comunicación bidireccional (ngModel).
+
+Comunicación mediante servicios.
+
+La expresión if si no se cumple no carga el componente o el contenido del bloque.
+@if (isEdit) {
+<cas-edit>.....</cas-edit>
+}
+
+Ciclo de vida de componente angular (Crear el componente (Constructor), Visualizar (HTML),Inicialización (nginit)... )
+
+Angular sigue un patrón de ciclo de vida basado en eventos, en el cual los componentes pasan por una serie de fases distintas. A continuación, se describen las principales fases y eventos de los ciclos de vida en Angular:
+
+1- Construcción: Durante esta fase, se crea una instancia del componente. En esta etapa, Angular inicializa las propiedades del componente y resuelve las dependencias necesarias. El evento principal de esta fase es el constructor, donde se pueden inicializar variables y configurar el estado inicial del componente.
+2- OnInit: Este evento ocurre justo después del constructor y se utiliza para realizar cualquier inicialización adicional que requiera el componente. Aquí es donde generalmente se realiza la lógica de inicialización que depende de las propiedades y dependencias del componente.
+3- OnChanges: Este evento se dispara cuando las propiedades de entrada (input) del componente cambian. Angular verifica si las propiedades de entrada han cambiado y, de ser así, ejecuta el código correspondiente. Este evento es útil para detectar cambios y tomar acciones en consecuencia.
+4- AfterContentInit: Este evento se desencadena una vez que Angular ha inicializado el contenido proyectado dentro del componente. Puede ser útil cuando se trabaja con componentes hijos o cuando se necesita acceder a elementos del DOM dentro del componente.
+5- AfterViewInit: En esta fase, Angular ha inicializado las vistas del componente y las ha renderizado en el DOM. El evento AfterViewInit se activa cuando la vista del componente está lista y se pueden realizar operaciones adicionales, como manipular el DOM o configurar componentes secundarios.
+6- OnDestroy: Este evento se desencadena justo antes de que el componente sea destruido y eliminado del DOM. Se utiliza para liberar recursos, cancelar suscripciones y realizar otras tareas de limpieza necesarias para evitar posibles fugas de memoria.
+
+rxjs
+
+https://reactivex.io/

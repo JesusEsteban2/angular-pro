@@ -1,6 +1,7 @@
-import { Component, input, output } from '@angular/core';
+import { Component, inject, input, output } from '@angular/core';
 import { Film } from './types/films.type';
-import { AddFilmComponent } from './components/add-film/add-film.component';
+import { AddFilmComponent } from './components/add-edit-film/add-edit-film.component';
+//import { TimeService } from '../../services/time.service';
 
 @Component({
   selector: 'cas-films',
@@ -9,10 +10,14 @@ import { AddFilmComponent } from './components/add-film/add-film.component';
   styleUrl: './films.component.css',
 })
 export default class FilmsComponent {
+  //timeService=inject(TimeService)
+  // constructor (private timeService:TimeService) {}
   film = input<Film>();
   eventDelete = output<string>();
   eventUpdate = output<string>();
   isEditing = false;
+
+  constructor() {}
 
   sendDelete() {
     const film = this.film() as Film;

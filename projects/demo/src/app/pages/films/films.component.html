@@ -2,7 +2,7 @@
   <strong>{{ film()?.title }}</strong> ({{ film()?.releaseYear }})
   <button (click)="openEdit()">📝</button>
   <button (click)="sendDelete()">🆑</button>
-  @if (isEditing) {
+  <!-- @if (isEditing) {
     <cas-add-film (addEvent)="updateFilm($event)" />
-  }
+  } -->
 </div>
