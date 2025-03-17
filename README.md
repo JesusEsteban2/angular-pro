@@ -104,3 +104,11 @@ Angular sigue un patrón de ciclo de vida basado en eventos, en el cual los comp
 rxjs
 
 https://reactivex.io/
+
+- Observables.
+
+Para utilizar HttpClient hay que definir un proveedor en el archivo app.config.ts
+
+provideHttpClient(withFetch()),
+
+https://angular.dev/guide/http/setup
